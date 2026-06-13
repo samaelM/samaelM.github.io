@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mael's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">Portfolio</div>
+            <ul class="nav-links">
+                <li><a href="#projects">Work</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero container">
+            <h1>Hi, I'm Mael.</h1>
+            <p>Welcome to my portfolio, this is a small collection of what I've done so far.</p>
+        </section>
+
+        <div id="projects">
+            <section class="project-section">
+                <div class="container project-content">
+                    <div class="project-text">
+                        <h2>Cub3D</h2>
+                        <h3 class="project-subtitle">Do I need a shower?</h3>
+                        <p class="project-description">
+                            Cub3D is a 3D engine group project. It uses raycasting to create a 3D perspective of a 2D map. We used a simple window manager library (MiniLibX) and C to create this project. It handles movement, rotation, texture on each side of the walls, animations, a minimap and mouse control.<br><br>
+                            This project was a great opportunity to learn about 3D graphics and C programming. It was also a great opportunity to learn about teamwork and collaboration. For this project I used C, Makefile and Git.
+                        </p>
+                        <div class="project-links">
+                            <a href="https://github.com/Anaelle42/Cub3D" target="_blank" class="github-button">
+                                View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="project-images">
+                        <img alt="Cub3D Screenshot" src="./images/cub3d.gif" class="project-image">
+                    </div>
+                </div>
+            </section>
+
+            <section class="project-section alternate-bg">
+                <div class="container project-content">
+                    <div class="project-text">
+                        <h2>Inception</h2>
+                        <h3 class="project-subtitle">But it works on my machine...</h3>
+                        <p class="project-description">
+                            This project consists of deploying a Wordpress website, using Docker, obviously, making it able to be deployed on any machine.<br><br>
+                            For this project I used Docker/Docker-compose, Wordpress, MariaDB and Nginx.
+                        </p>
+                        <div class="project-links">
+                            <a href="https://github.com/samaelM/inception" target="_blank" class="github-button">
+                                View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="project-images">
+                        <img alt="Inception Screenshot" src="./images/inception.png" class="project-image">
+                    </div>
+                </div>
+            </section>
+
+            <section class="project-section">
+                <div class="container project-content">
+                    <div class="project-text">
+                        <h2>BlackJack CLI</h2>
+                        <h3 class="project-subtitle">The machine always win, or something like that...</h3>
+                        <p class="project-description">
+                            This project is a simple command-line interface for a game of Blackjack coded entirely in C++. The game is really simple with not a lot of features, but it feels great to play, proving that a game does not need complexity or a lot of content to be good.<br><br>
+                            For this project I used C++ and Makefile. I wasn't planning on putting this project in my portfolio, because it was supposed to be a small fun project for myself, but the people I've shown it to really liked it, so I decided to add it.
+                        </p>
+                        <div class="project-links">
+                            <a href="https://github.com/samaelM/BlackJackCLI" target="_blank" class="github-button">
+                                View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="project-images">
+                        <img alt="BlackJack CLI Screenshot" src="./images/blackjack.png" class="project-image">
+                    </div>
+                </div>
+            </section>
+        </div>
+
+
+		<section id="about" class="info-section alternate-bg">
+            <div class="container info-grid">
+                
+                <div class="info-block">
+                    <h2>Honorable Mentions</h2>
+                    <p class="info-desc">Here are some other projects I've worked on that I'm proud of:</p>
+                    <ul class="custom-list">
+                        <li><strong>Minishell:</strong> a simpler version of the posix bash shell, executing command and navigating throught the file system.</li>
+                        <li><strong>Philosopher:</strong> a solution for the famous dining philosophers problem, using threads and mutexes.</li>
+                        <li><strong>libasm:</strong> a simple library of a few functions written using NASM.</li>
+                    </ul>
+                </div>
+
+                <div class="info-block">
+                    <h2>Languages & Tools</h2>
+                    <p class="info-desc">Here are some of the technologies I've worked with:</p>
+                    <div class="tags-container">
+                        <span class="tag">Python</span>
+                        <span class="tag">C/C++</span>
+                        <span class="tag">C#</span>
+                        <span class="tag">TypeScript</span>
+                        <span class="tag">NASM</span>
+                        <span class="tag">Docker/Docker-compose</span>
+                        <span class="tag">Git</span>
+                        <span class="tag">Makefile</span>
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,307 @@
+:root {
+    /* Bold Red & Black palette */
+    --text-primary: #ffffff;
+    --text-secondary: #a3a3a3;
+    --bg-primary: #0a0a0a;
+    --bg-secondary: #141414;
+    --border-color: #262626;
+    --accent: #e50914; /* A vivid, strong red */
+    
+    /* Button styles */
+    --button-bg: var(--accent);
+    --button-text: #ffffff;
+    --button-hover: #b9090b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Base Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Header & Nav */
+header {
+    border-bottom: 1px solid var(--border-color);
+    padding: 1.5rem 0;
+    background-color: var(--bg-primary);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-secondary);
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+/* Hero Intro */
+.hero {
+    padding: 6rem 2rem 4rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    letter-spacing: -0.025em;
+    color: var(--text-primary);
+}
+
+.hero p {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    max-width: 650px;
+}
+
+/* Large Project Sections */
+.project-section {
+    padding: 6rem 0;
+    border-top: 1px solid var(--border-color);
+}
+
+/* Alternate background */
+.alternate-bg {
+    background-color: var(--bg-secondary);
+    border-top: none;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Flex layout for zig-zag staggering effect */
+.project-content {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+}
+
+/* Zig-zag: Even items put text on right, image on left */
+.project-section:nth-child(even) .project-content {
+    flex-direction: row-reverse;
+}
+
+/* The text chunk */
+.project-text {
+    flex: 1;
+}
+
+.project-text h2 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    letter-spacing: -0.02em;
+}
+
+.project-subtitle {
+    font-size: 1.15rem;
+    color: var(--accent);
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+.project-description {
+    font-size: 1.125rem;
+    color: var(--text-secondary);
+    margin-bottom: 2.5rem;
+    line-height: 1.7;
+}
+
+/* The images chunk */
+.project-images {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Image Element */
+.project-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    object-fit: cover;
+}
+
+/* Prominent GitHub Button */
+.github-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.8rem 1.8rem;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 1.05rem;
+    transition: background-color 0.2s ease;
+}
+
+.github-button:hover {
+    background-color: var(--button-hover);
+}
+
+/* Info Section (About, Honorable Mentions, etc.) */
+.info-section {
+    padding: 6rem 0;
+    border-top: 1px solid var(--border-color);
+}
+
+.info-grid {
+    display: flex;
+    gap: 4rem;
+}
+
+.info-block {
+    flex: 1;
+}
+
+.info-block h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.info-desc {
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+/* Custom list for Honorable Mentions */
+.custom-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.custom-list li {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.custom-list li::before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: bold;
+}
+
+.custom-list strong {
+    color: var(--text-primary);
+}
+
+/* Tags Container for Languages */
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.tag {
+    background-color: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    transition: all 0.2s ease;
+}
+
+.tag:hover {
+    border-color: var(--accent);
+    color: var(--text-primary);
+}
+
+/* Footer Focus */
+footer {
+    padding: 5rem 2rem;
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+}
+
+footer h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+footer p {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+/* Basic Responsiveness */
+@media (max-width: 900px) {
+    .container {
+        padding: 0 1.5rem;
+    }
+
+    .project-content,
+    .project-section:nth-child(even) .project-content,
+    .info-grid {
+        flex-direction: column;
+        gap: 3rem;
+    }
+    
+    .project-text,
+    .project-images,
+    .info-block {
+        width: 100%;
+        flex: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .project-text h2 {
+        font-size: 1.75rem;
+    }
+}
